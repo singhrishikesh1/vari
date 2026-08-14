@@ -1,0 +1,195 @@
+{
+  "projectInfo": {
+    "title": "SAHYATRI",
+    "tagline": "Together Towards a Safer Wari",
+    "teamId": "U689ELV5",
+    "teamName": "Checkmate",
+    "track": "Healthcare",
+    "projectType": "Hardware + Software",
+    "leader": "Rishikesh Singh",
+    "members": ["Rishikesh Singh", "Parth Pinjarkar", "Aditi Singh"],
+    "smartBandCost": "₹100–120 per band",
+    "helplineNumber": "1800-SAHYATRI (1800-724-9287)"
+  },
+  "stats": {
+    "devoteesMonitored": 250000,
+    "activeBands": 1250,
+    "activeCamps": 48,
+    "volunteersOnField": 320,
+    "sosAlertsToday": 14,
+    "resolvedAlerts": 12
+  },
+  "sosAlerts": [
+    {
+      "id": "SOS-8921",
+      "bandId": "BAND-ESP-014",
+      "pilgrimName": "Maruti Shinde",
+      "age": 68,
+      "location": "Saswad Camp 2 (Dindi #42)",
+      "lat": 18.3438,
+      "lng": 74.0305,
+      "issue": "Severe Dehydration & Dizziness",
+      "priority": "CRITICAL",
+      "status": "Responding",
+      "assignedVolunteer": "Rahul Deshmukh",
+      "timestamp": "2026-08-15 02:45 PM"
+    },
+    {
+      "id": "SOS-8922",
+      "bandId": "BAND-ESP-089",
+      "pilgrimName": "Anusaya Gaikwad",
+      "age": 72,
+      "location": "Jejuri Staging Area",
+      "lat": 18.2778,
+      "lng": 74.1593,
+      "issue": "Heatstroke / High Pulse",
+      "priority": "CRITICAL",
+      "status": "Medical Dispatched",
+      "assignedVolunteer": "Priya Patil",
+      "timestamp": "2026-08-15 02:58 PM"
+    },
+    {
+      "id": "SOS-8920",
+      "bandId": "BAND-ESP-112",
+      "pilgrimName": "Pandurang Kadam",
+      "age": 61,
+      "location": "Alandi Ghat Sector 4",
+      "lat": 18.6771,
+      "lng": 73.8967,
+      "issue": "Diabetic Foot Injury",
+      "priority": "MODERATE",
+      "status": "Resolved",
+      "assignedVolunteer": "Amit Joshi",
+      "timestamp": "2026-08-15 01:15 PM"
+    },
+    {
+      "id": "SOS-8918",
+      "bandId": "BAND-ESP-055",
+      "pilgrimName": "Sunita Mane",
+      "age": 59,
+      "location": "Lonand Halt Camp",
+      "lat": 18.0375,
+      "lng": 74.1842,
+      "issue": "Exhaustion & Hyperventilation",
+      "priority": "HIGH",
+      "status": "Resolved",
+      "assignedVolunteer": "Suresh Kale",
+      "timestamp": "2026-08-15 12:30 PM"
+    }
+  ],
+  "medicalCamps": [
+    {
+      "id": "CAMP-01",
+      "name": "Alandi Primary Medical Hub",
+      "lat": 18.6771,
+      "lng": 73.8967,
+      "doctorsOnDuty": 4,
+      "bedsAvailable": 12,
+      "orsStock": "85%",
+      "paracetamolStock": "90%",
+      "status": "Operational"
+    },
+    {
+      "id": "CAMP-02",
+      "name": "Pune Sangam Medical Tent",
+      "lat": 18.5204,
+      "lng": 73.8567,
+      "doctorsOnDuty": 6,
+      "bedsAvailable": 18,
+      "orsStock": "60%",
+      "paracetamolStock": "75%",
+      "status": "Operational"
+    },
+    {
+      "id": "CAMP-03",
+      "name": "Saswad Express Health Post",
+      "lat": 18.3438,
+      "lng": 74.0305,
+      "doctorsOnDuty": 5,
+      "bedsAvailable": 8,
+      "orsStock": "40% (Refill Requested)",
+      "paracetamolStock": "55%",
+      "status": "High Load"
+    },
+    {
+      "id": "CAMP-04",
+      "name": "Jejuri Hill Medical Base",
+      "lat": 18.2778,
+      "lng": 74.1593,
+      "doctorsOnDuty": 3,
+      "bedsAvailable": 10,
+      "orsStock": "70%",
+      "paracetamolStock": "80%",
+      "status": "Operational"
+    },
+    {
+      "id": "CAMP-05",
+      "name": "Pandharpur Central Temple Hospital",
+      "lat": 17.6775,
+      "lng": 75.3283,
+      "doctorsOnDuty": 12,
+      "bedsAvailable": 45,
+      "orsStock": "95%",
+      "paracetamolStock": "95%",
+      "status": "Operational"
+    }
+  ],
+  "volunteerLogs": [
+    {
+      "id": "VLOG-101",
+      "volunteerName": "Rahul Deshmukh",
+      "dindiNumber": "Dindi #42",
+      "symptom": "Dehydration & Muscle Cramps",
+      "pilgrimsTreated": 14,
+      "washIssue": "Water tanker refilled at Sector 3",
+      "timestamp": "10 mins ago"
+    },
+    {
+      "id": "VLOG-102",
+      "volunteerName": "Priya Patil",
+      "dindiNumber": "Dindi #18",
+      "symptom": "Blisters & Foot Pain",
+      "pilgrimsTreated": 22,
+      "washIssue": "Sanitation area 2 clean, soap replaced",
+      "timestamp": "25 mins ago"
+    },
+    {
+      "id": "VLOG-103",
+      "volunteerName": "Vikram Shinde",
+      "dindiNumber": "Dindi #05",
+      "symptom": "Mild Fever / Headache",
+      "pilgrimsTreated": 9,
+      "washIssue": "Additional garbage bins requested",
+      "timestamp": "1 hour ago"
+    }
+  ],
+  "ivrLogs": [
+    {
+      "callId": "IVR-7701",
+      "callerType": "Feature Phone User (Pilgrim)",
+      "language": "Marathi",
+      "optionSelected": "Press 1 - Emergency Reporting",
+      "assignedCamp": "Saswad Camp 2",
+      "status": "Connected to Volunteer",
+      "timestamp": "03:10 PM"
+    },
+    {
+      "callId": "IVR-7702",
+      "callerType": "Elderly Devotee",
+      "language": "Marathi",
+      "optionSelected": "Press 3 - Nearest Medical Camp Lookup",
+      "assignedCamp": "Automated SMS sent with Camp 3 Location",
+      "status": "Completed",
+      "timestamp": "02:55 PM"
+    },
+    {
+      "callId": "IVR-7703",
+      "callerType": "Dindi Representative",
+      "language": "Marathi",
+      "optionSelected": "Press 4 - Drinking Water Point Info",
+      "assignedCamp": "Water Tanker Station 5",
+      "status": "Completed",
+      "timestamp": "02:30 PM"
+    }
+  ]
+}

@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SAHYATRI – Healthcare Ecosystem for Pandharpur Wari</title>
+  
+  <!-- Google Fonts & Leaflet CSS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header Banner -->
+  <header>
+    <div class="header-container">
+      <div class="brand-section">
+        <h1>🚩 SAHYATRI</h1>
+        <p>Together Towards a Safer Wari – Low-Cost Offline Healthcare Ecosystem</p>
+      </div>
+      <div class="team-badge">
+        <div class="team-name">Team Checkmate</div>
+        <div class="team-id">Team ID: U689ELV5 | Healthcare Track</div>
+        <div class="team-members">Leader: Rishikesh Singh | Members: Parth Pinjarkar, Aditi Singh</div>
+      </div>
+    </div>
+  </header>
+
+  <div class="main-container">
+
+    <!-- Top Key Metrics Bar -->
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-icon">🚩</div>
+        <div class="stat-info">
+          <h4>Pilgrims Monitored</h4>
+          <div class="stat-value" id="statDevotees">250,000+</div>
+        </div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon">⌚</div>
+        <div class="stat-info">
+          <h4>Active SOS Bands</h4>
+          <div class="stat-value" id="statActiveBands">1,250</div>
+        </div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon">🏥</div>
+        <div class="stat-info">
+          <h4>Active Medical Camps</h4>
+          <div class="stat-value" id="statActiveCamps">48</div>
+        </div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon">🚨</div>
+        <div class="stat-info">
+          <h4>SOS Alerts Today</h4>
+          <div class="stat-value" id="statSosAlerts">14</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tab Navigation Bar -->
+    <div class="tab-navigation">
+      <button class="tab-btn active" data-tab="tab-overview">📄 Overview & Pitch</button>
+      <button class="tab-btn" data-tab="tab-smartband">⌚ SOS Smart Band</button>
+      <button class="tab-btn" data-tab="tab-volunteer">📱 Volunteer App</button>
+      <button class="tab-btn" data-tab="tab-dashboard">📊 Central Dashboard & Map</button>
+      <button class="tab-btn" data-tab="tab-ivr">📞 Marathi IVR Helpline</button>
+    </div>
+
+    <!-- TAB 1: PROJECT OVERVIEW & PITCH -->
+    <div id="tab-overview" class="tab-panel active">
+      <div class="section-header">
+        <h2>Stage 1 Problem Discovery & Solution Pitch</h2>
+        <p>Comprehensive overview of challenges faced during Pandharpur Wari and SAHYATRI's low-cost solution.</p>
+      </div>
+
+      <div class="card-grid" style="margin-bottom: 2rem;">
+        <div class="card">
+          <h3>⚠️ The Problem Statement</h3>
+          <p style="font-size: 0.95rem; color: #cbd5e1; margin-bottom: 1rem;">
+            Every year, lakhs of devotees walk in the Pandharpur Wari. Medical camps currently depend on paper records, manual reporting, and phone calls.
+          </p>
+          <ul style="list-style-type: disc; padding-left: 1.25rem; font-size: 0.9rem; color: #94a3b8;">
+            <li>Heatstroke, dehydration, diabetic complications & cardiac emergencies.</li>
+            <li>Volunteers lack real-time centralized tracking.</li>
+            <li>Elderly pilgrims often lack smartphones, making digital apps inaccessible.</li>
+            <li>Lack of early warning for disease outbreaks along the route.</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>💡 Proposed Ecosystem Solution</h3>
+          <p style="font-size: 0.95rem; color: #cbd5e1; margin-bottom: 1rem;">
+            SAHYATRI introduces a 4-pillar offline-capable healthcare ecosystem designed specifically for the Wari environment:
+          </p>
+          <ol style="padding-left: 1.25rem; font-size: 0.9rem; color: #94a3b8; display: flex; flex-direction: column; gap: 0.5rem;">
+            <li><strong>SOS Smart Band (₹100–120):</strong> Wearable BLE panic button with QR medical ID.</li>
+            <li><strong>Offline Volunteer App:</strong> Symptom logging & automatic sync.</li>
+            <li><strong>Central Health Dashboard:</strong> Live route monitoring & emergency alert map.</li>
+            <li><strong>IVR Accessibility Layer:</strong> Toll-free Marathi phone helpline (1800-SAHYATRI).</li>
+          </ol>
+        </div>
+      </div>
+
+      <div class="card" style="margin-bottom: 2rem;">
+        <h3>🛠️ Technology Stack & Feasibility</h3>
+        <div class="tech-spec-grid" style="margin-top: 1rem;">
+          <div class="tech-card">
+            <h4>Hardware Architecture</h4>
+            <ul>
+              <li>ESP32 Microcontroller</li>
+              <li>BLE (Bluetooth Low Energy)</li>
+              <li>CR2032 Battery (Long Life)</li>
+              <li>Silicone Water-Resistant Band</li>
+              <li>Production: Nordic nRF52832</li>
+            </ul>
+          </div>
+          <div class="tech-card">
+            <h4>Volunteer Mobile App</h4>
+            <ul>
+              <li>Flutter Prototype</li>
+              <li>SQLite / Room DB</li>
+              <li>BLE Auto-Discovery</li>
+              <li>Offline Sync Queue</li>
+              <li>Marathi Language Support</li>
+            </ul>
+          </div>
+          <div class="tech-card">
+            <h4>Backend & Analytics</h4>
+            <ul>
+              <li>Node.js / Express Server</li>
+              <li>Firestore & WebSockets</li>
+              <li>Rule-based Cluster Detection</li>
+              <li>GeoJSON Route Mapping</li>
+            </ul>
+          </div>
+          <div class="tech-card">
+            <h4>Cost & Impact</h4>
+            <ul>
+              <li>Smart Band Cost: ₹100–120</li>
+              <li>Zero Pilgrim Smartphone Requirement</li>
+              <li>Scalable to Kumbh Mela & Amarnath Yatra</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB 2: SOS SMART BAND SIMULATOR -->
+    <div id="tab-smartband" class="tab-panel">
+      <div class="section-header">
+        <h2>Pillar 1: SOS Smart Band Simulator</h2>
+        <p>Low-cost (₹100–120 per band) wearable device for elderly pilgrims and devotees.</p>
+      </div>
+
+      <div class="card-grid">
+        <div class="card">
+          <h3>⌚ Interactive SOS Hardware Button</h3>
+          <div class="band-preview">
+            <div class="band-illustration" onclick="triggerSosAlert()" title="Click to Simulate Panic Button Press">
+              <span>PRESS SOS</span>
+              <small>BLE 5.0 Active</small>
+            </div>
+            <p style="font-size: 0.85rem; color: #94a3b8; margin-top: 0.5rem;">
+              Click the red SOS button above or use the trigger below to simulate a real-time emergency signal from a pilgrim's smart band.
+            </p>
+          </div>
+
+          <form id="sosForm" onsubmit="event.preventDefault(); triggerSosAlert();">
+            <div class="form-group">
+              <label>Simulated Band ID</label>
+              <input type="text" id="simBandId" class="form-control" value="BAND-ESP-904" placeholder="e.g. BAND-ESP-101">
+            </div>
+            <div class="form-group">
+              <label>Pilgrim Name</label>
+              <input type="text" id="simPilgrimName" class="form-control" value="Tukaram Bhosale" placeholder="Pilgrim Name">
+            </div>
+            <div class="form-group">
+              <label>Simulated Distress Type</label>
+              <select id="simIssueSelect" class="form-control">
+                <option value="Severe Heatstroke & Dehydration">Severe Heatstroke & Dehydration</option>
+                <option value="Chest Pain / Cardiac Symptoms">Chest Pain / Cardiac Symptoms</option>
+                <option value="Fall Injury / Fracture">Fall Injury / Fracture</option>
+                <option value="Diabetic Hypoglycemia">Diabetic Hypoglycemia</option>
+              </select>
+            </div>
+            <button type="submit" class="btn-sos">🚨 Trigger SOS Signal Now</button>
+          </form>
+        </div>
+
+        <div class="card">
+          <h3>📷 QR Medical ID & Band Specifications</h3>
+          <div style="background: #0f172a; padding: 1.25rem; border-radius: 10px; border: 1px solid var(--border-color); text-align: center; margin-bottom: 1rem;">
+            <div style="font-size: 4rem; line-height: 1;">📱</div>
+            <h4 style="color: #fbbf24; margin-top: 0.5rem;">Scannable QR Medical Profile</h4>
+            <p style="font-size: 0.85rem; color: #cbd5e1; margin-top: 0.25rem;">
+              Contains emergency contact numbers, blood group, medical history, and Dindi number without requiring internet on the pilgrim's band.
+            </p>
+          </div>
+          <ul style="list-style: square; padding-left: 1.25rem; font-size: 0.9rem; color: #94a3b8; display: flex; flex-direction: column; gap: 0.5rem;">
+            <li><strong>Production Hardware:</strong> Nordic nRF52832 with custom PCB.</li>
+            <li><strong>Battery Life:</strong> 20+ days on single CR2032 coin cell.</li>
+            <li><strong>BLE Range:</strong> Broadcasts to any nearby volunteer smartphone within 50 meters.</li>
+            <li><strong>Unit Cost:</strong> ₹100–120 (Affordable for bulk deployment).</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB 3: VOLUNTEER APP -->
+    <div id="tab-volunteer" class="tab-panel">
+      <div class="section-header">
+        <h2>Pillar 2: Offline-First Volunteer Mobile App</h2>
+        <p>Rapid symptom logging, Dindi tagging, and WASH (Water/Sanitation) reporting.</p>
+      </div>
+
+      <div class="card-grid">
+        <div class="card">
+          <h3>📝 Rapid Symptom Logger</h3>
+          <form id="volunteerForm" onsubmit="submitVolunteerLog(event)">
+            <div class="form-group">
+              <label>Volunteer Name</label>
+              <input type="text" id="vName" class="form-control" value="Rahul Deshmukh" required>
+            </div>
+            <div class="form-group">
+              <label>Dindi Tagging</label>
+              <select id="dindiNum" class="form-control">
+                <option value="Dindi #42 (Jnaneshwar Palkhi)">Dindi #42 (Jnaneshwar Palkhi)</option>
+                <option value="Dindi #18 (Tukaram Palkhi)">Dindi #18 (Tukaram Palkhi)</option>
+                <option value="Dindi #05 (Sopandev Palkhi)">Dindi #05 (Sopandev Palkhi)</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Observed Symptom / Illness</label>
+              <input type="text" id="symptomText" class="form-control" value="Dehydration & Leg Cramps" required>
+            </div>
+            <div class="form-group">
+              <label>Pilgrims Treated Count</label>
+              <input type="number" id="treatedCount" class="form-control" value="5" min="1" required>
+            </div>
+            <button type="submit" class="btn-primary">Sync Log Entry</button>
+          </form>
+        </div>
+
+        <div class="card">
+          <h3>📋 Live Volunteer Field Activity Feed</h3>
+          <div id="volunteerLogsList" style="max-height: 400px; overflow-y: auto;">
+            <!-- Rendered dynamically -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB 4: CENTRAL HEALTH DASHBOARD & MAP -->
+    <div id="tab-dashboard" class="tab-panel">
+      <div class="section-header">
+        <h2>Pillar 3: Central Health Dashboard & Interactive Map</h2>
+        <p>Real-time location tracking along Pune to Pandharpur route with live emergency markers.</p>
+      </div>
+
+      <div class="card" style="margin-bottom: 1.5rem;">
+        <h3>🗺️ Live Route Map (Alandi → Pune → Saswad → Jejuri → Pandharpur)</h3>
+        <div id="wariMap"></div>
+      </div>
+
+      <div class="card" style="margin-bottom: 1.5rem;">
+        <h3>🚨 Live SOS Emergency Alerts Feed</h3>
+        <div class="table-container">
+          <table>
+            <thead>
+              <tr>
+                <th>Alert ID</th>
+                <th>Pilgrim</th>
+                <th>Location</th>
+                <th>Priority</th>
+                <th>Distress Issue</th>
+                <th>Status</th>
+                <th>Timestamp</th>
+              </tr>
+            </thead>
+            <tbody id="alertsTableBody">
+              <!-- Dynamically populated -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>🏥 Medical Camp Inventory & Capacity</h3>
+        <div class="tech-spec-grid" id="campsListContainer" style="margin-top: 1rem;">
+          <!-- Dynamically populated -->
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB 5: MARATHI IVR HELPLINE -->
+    <div id="tab-ivr" class="tab-panel">
+      <div class="section-header">
+        <h2>Pillar 4: IVR Accessibility Layer (1800-SAHYATRI)</h2>
+        <p>Toll-free voice helpline tailored for non-smartphone users with Marathi prompts.</p>
+      </div>
+
+      <div class="card-grid">
+        <div class="card">
+          <h3>📞 Interactive IVR Dialpad Simulator</h3>
+          <p style="font-size: 0.85rem; color: #94a3b8; text-align: center;">
+            Toll-Free Helpline: <strong>1800-SAHYATRI (1800-724-9287)</strong>
+          </p>
+
+          <div class="ivr-status-screen">
+            <h4>AUDIO PROMPT (मराठी)</h4>
+            <p id="ivrScreenDisplay">"नमस्कार, सहयात्री हेल्पलाइनमध्ये आपले स्वागत आहे..."</p>
+          </div>
+
+          <div class="dialpad">
+            <button class="dialpad-btn" onclick="pressIvrKey('1')">1<br><small style="font-size: 0.6rem; color: #fca5a5;">Emergency</small></button>
+            <button class="dialpad-btn" onclick="pressIvrKey('2')">2<br><small style="font-size: 0.6rem; color: #93c5fd;">Sanitation</small></button>
+            <button class="dialpad-btn" onclick="pressIvrKey('3')">3<br><small style="font-size: 0.6rem; color: #86efac;">Nearest Camp</small></button>
+            <button class="dialpad-btn" onclick="pressIvrKey('4')">4<br><small style="font-size: 0.6rem; color: #fde047;">Water Info</small></button>
+            <button class="dialpad-btn" onclick="pressIvrKey('5')">5</button>
+            <button class="dialpad-btn" onclick="pressIvrKey('6')">6</button>
+            <button class="dialpad-btn" onclick="pressIvrKey('7')">7</button>
+            <button class="dialpad-btn" onclick="pressIvrKey('8')">8</button>
+            <button class="dialpad-btn" onclick="pressIvrKey('9')">9</button>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>📋 Live IVR Call Log History</h3>
+          <div class="table-container">
+            <table>
+              <thead>
+                <tr>
+                  <th>Call ID</th>
+                  <th>Caller Type</th>
+                  <th>Language</th>
+                  <th>Selected Key</th>
+                  <th>Action Taken</th>
+                  <th>Time</th>
+                </tr>
+              </thead>
+              <tbody id="ivrTableBody">
+                <!-- Dynamically populated -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p><strong>SAHYATRI Project</strong> &copy; 2026 Varithon | Team Checkmate (Team ID: U689ELV5)</p>
+    <p style="font-size: 0.8rem; color: #64748b; margin-top: 0.25rem;">Marathwada Mitra Mandal's College of Engineering</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

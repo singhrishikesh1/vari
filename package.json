@@ -1,0 +1,24 @@
+{
+  "name": "sahyatri-vari-healthcare",
+  "version": "1.0.0",
+  "description": "SAHYATRI - Together Towards a Safer Wari Healthcare Ecosystem Website & Dashboard",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": [
+    "sahyatri",
+    "wari",
+    "healthcare",
+    "pandharpur",
+    "sos-band",
+    "ivr",
+    "dashboard"
+  ],
+  "author": "Checkmate Team (Rishikesh Singh, Parth Pinjarkar, Aditi Singh)",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
