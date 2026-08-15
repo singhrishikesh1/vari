@@ -1,195 +1,163 @@
 {
   "projectInfo": {
     "title": "SAHYATRI",
-    "tagline": "Together Towards a Safer Wari",
+    "tagline": "Healthcare & Emergency Assistance System for Pandharpur Wari",
     "teamId": "U689ELV5",
     "teamName": "Checkmate",
     "track": "Healthcare",
     "projectType": "Hardware + Software",
     "leader": "Rishikesh Singh",
     "members": ["Rishikesh Singh", "Parth Pinjarkar", "Aditi Singh"],
-    "smartBandCost": "₹100–120 per band",
-    "helplineNumber": "1800-SAHYATRI (1800-724-9287)"
+    "smartBandCost": "₹100 - ₹120 per band",
+    "helplineNumber": "1800-SAHYATRI"
   },
   "stats": {
-    "devoteesMonitored": 250000,
-    "activeBands": 1250,
-    "activeCamps": 48,
-    "volunteersOnField": 320,
-    "sosAlertsToday": 14,
-    "resolvedAlerts": 12
+    "devoteesMonitored": 150000,
+    "activeBands": 1200,
+    "activeCamps": 36,
+    "volunteersOnField": 240,
+    "sosAlertsToday": 8,
+    "resolvedAlerts": 7
   },
   "sosAlerts": [
     {
-      "id": "SOS-8921",
-      "bandId": "BAND-ESP-014",
-      "pilgrimName": "Maruti Shinde",
-      "age": 68,
-      "location": "Saswad Camp 2 (Dindi #42)",
+      "id": "SOS-104",
+      "bandId": "BAND-882",
+      "pilgrimName": "Nivrutti Patil",
+      "age": 64,
+      "location": "Saswad Camp 2",
       "lat": 18.3438,
       "lng": 74.0305,
-      "issue": "Severe Dehydration & Dizziness",
-      "priority": "CRITICAL",
-      "status": "Responding",
-      "assignedVolunteer": "Rahul Deshmukh",
-      "timestamp": "2026-08-15 02:45 PM"
+      "issue": "Dehydration & Low Blood Pressure",
+      "priority": "HIGH",
+      "status": "Doctor Attending",
+      "assignedVolunteer": "Suresh J.",
+      "timestamp": "02:15 PM"
     },
     {
-      "id": "SOS-8922",
-      "bandId": "BAND-ESP-089",
-      "pilgrimName": "Anusaya Gaikwad",
-      "age": 72,
-      "location": "Jejuri Staging Area",
+      "id": "SOS-103",
+      "bandId": "BAND-419",
+      "pilgrimName": "Kamalbai More",
+      "age": 58,
+      "location": "Jejuri Stop",
       "lat": 18.2778,
       "lng": 74.1593,
-      "issue": "Heatstroke / High Pulse",
-      "priority": "CRITICAL",
-      "status": "Medical Dispatched",
-      "assignedVolunteer": "Priya Patil",
-      "timestamp": "2026-08-15 02:58 PM"
+      "issue": "Foot Blister & Joint Pain",
+      "priority": "MODERATE",
+      "status": "First Aid Provided",
+      "assignedVolunteer": "Pooja M.",
+      "timestamp": "01:40 PM"
     },
     {
-      "id": "SOS-8920",
-      "bandId": "BAND-ESP-112",
-      "pilgrimName": "Pandurang Kadam",
-      "age": 61,
-      "location": "Alandi Ghat Sector 4",
+      "id": "SOS-102",
+      "bandId": "BAND-105",
+      "pilgrimName": "Raghunath Joshi",
+      "age": 71,
+      "location": "Alandi Sector",
       "lat": 18.6771,
       "lng": 73.8967,
-      "issue": "Diabetic Foot Injury",
-      "priority": "MODERATE",
-      "status": "Resolved",
-      "assignedVolunteer": "Amit Joshi",
-      "timestamp": "2026-08-15 01:15 PM"
-    },
-    {
-      "id": "SOS-8918",
-      "bandId": "BAND-ESP-055",
-      "pilgrimName": "Sunita Mane",
-      "age": 59,
-      "location": "Lonand Halt Camp",
-      "lat": 18.0375,
-      "lng": 74.1842,
-      "issue": "Exhaustion & Hyperventilation",
+      "issue": "Dizziness from Heat",
       "priority": "HIGH",
       "status": "Resolved",
-      "assignedVolunteer": "Suresh Kale",
-      "timestamp": "2026-08-15 12:30 PM"
+      "assignedVolunteer": "Amit K.",
+      "timestamp": "11:20 AM"
     }
   ],
   "medicalCamps": [
     {
-      "id": "CAMP-01",
-      "name": "Alandi Primary Medical Hub",
+      "id": "CAMP-1",
+      "name": "Alandi Primary Post",
       "lat": 18.6771,
       "lng": 73.8967,
-      "doctorsOnDuty": 4,
-      "bedsAvailable": 12,
-      "orsStock": "85%",
-      "paracetamolStock": "90%",
-      "status": "Operational"
+      "doctorsOnDuty": 3,
+      "bedsAvailable": 8,
+      "orsStock": "High",
+      "paracetamolStock": "Adequate",
+      "status": "Open"
     },
     {
-      "id": "CAMP-02",
-      "name": "Pune Sangam Medical Tent",
+      "id": "CAMP-2",
+      "name": "Pune City Health Tent",
       "lat": 18.5204,
       "lng": 73.8567,
-      "doctorsOnDuty": 6,
-      "bedsAvailable": 18,
-      "orsStock": "60%",
-      "paracetamolStock": "75%",
-      "status": "Operational"
+      "doctorsOnDuty": 5,
+      "bedsAvailable": 14,
+      "orsStock": "Adequate",
+      "paracetamolStock": "Adequate",
+      "status": "Open"
     },
     {
-      "id": "CAMP-03",
-      "name": "Saswad Express Health Post",
+      "id": "CAMP-3",
+      "name": "Saswad Emergency Base",
       "lat": 18.3438,
       "lng": 74.0305,
-      "doctorsOnDuty": 5,
-      "bedsAvailable": 8,
-      "orsStock": "40% (Refill Requested)",
-      "paracetamolStock": "55%",
-      "status": "High Load"
+      "doctorsOnDuty": 4,
+      "bedsAvailable": 6,
+      "orsStock": "Needs Refill",
+      "paracetamolStock": "Adequate",
+      "status": "Busy"
     },
     {
-      "id": "CAMP-04",
-      "name": "Jejuri Hill Medical Base",
+      "id": "CAMP-4",
+      "name": "Jejuri Camp",
       "lat": 18.2778,
       "lng": 74.1593,
       "doctorsOnDuty": 3,
       "bedsAvailable": 10,
-      "orsStock": "70%",
-      "paracetamolStock": "80%",
-      "status": "Operational"
+      "orsStock": "Adequate",
+      "paracetamolStock": "Adequate",
+      "status": "Open"
     },
     {
-      "id": "CAMP-05",
-      "name": "Pandharpur Central Temple Hospital",
+      "id": "CAMP-5",
+      "name": "Pandharpur Main Hospital Base",
       "lat": 17.6775,
       "lng": 75.3283,
-      "doctorsOnDuty": 12,
-      "bedsAvailable": 45,
-      "orsStock": "95%",
-      "paracetamolStock": "95%",
-      "status": "Operational"
+      "doctorsOnDuty": 10,
+      "bedsAvailable": 30,
+      "orsStock": "High",
+      "paracetamolStock": "High",
+      "status": "Open"
     }
   ],
   "volunteerLogs": [
     {
-      "id": "VLOG-101",
-      "volunteerName": "Rahul Deshmukh",
-      "dindiNumber": "Dindi #42",
-      "symptom": "Dehydration & Muscle Cramps",
-      "pilgrimsTreated": 14,
-      "washIssue": "Water tanker refilled at Sector 3",
-      "timestamp": "10 mins ago"
+      "id": "LOG-301",
+      "volunteerName": "Suresh Deshmukh",
+      "dindiNumber": "Dindi 12",
+      "symptom": "Dehydration / Exhaustion",
+      "pilgrimsTreated": 8,
+      "washIssue": "Water supply refill done at halt",
+      "timestamp": "15 mins ago"
     },
     {
-      "id": "VLOG-102",
-      "volunteerName": "Priya Patil",
-      "dindiNumber": "Dindi #18",
-      "symptom": "Blisters & Foot Pain",
-      "pilgrimsTreated": 22,
-      "washIssue": "Sanitation area 2 clean, soap replaced",
-      "timestamp": "25 mins ago"
-    },
-    {
-      "id": "VLOG-103",
-      "volunteerName": "Vikram Shinde",
-      "dindiNumber": "Dindi #05",
-      "symptom": "Mild Fever / Headache",
-      "pilgrimsTreated": 9,
-      "washIssue": "Additional garbage bins requested",
-      "timestamp": "1 hour ago"
+      "id": "LOG-302",
+      "volunteerName": "Pooja More",
+      "dindiNumber": "Dindi 24",
+      "symptom": "Foot Blisters",
+      "pilgrimsTreated": 12,
+      "washIssue": "Sanitation area cleaned by local team",
+      "timestamp": "40 mins ago"
     }
   ],
   "ivrLogs": [
     {
-      "callId": "IVR-7701",
-      "callerType": "Feature Phone User (Pilgrim)",
+      "callId": "CALL-501",
+      "callerType": "Devotee (Keypad Phone)",
       "language": "Marathi",
-      "optionSelected": "Press 1 - Emergency Reporting",
-      "assignedCamp": "Saswad Camp 2",
-      "status": "Connected to Volunteer",
-      "timestamp": "03:10 PM"
+      "optionSelected": "Key 1 - Emergency Medical Aid",
+      "assignedCamp": "Nearest Camp (Saswad)",
+      "status": "Connected",
+      "timestamp": "02:10 PM"
     },
     {
-      "callId": "IVR-7702",
-      "callerType": "Elderly Devotee",
+      "callId": "CALL-502",
+      "callerType": "Elderly Pilgrim",
       "language": "Marathi",
-      "optionSelected": "Press 3 - Nearest Medical Camp Lookup",
-      "assignedCamp": "Automated SMS sent with Camp 3 Location",
+      "optionSelected": "Key 3 - Find Medical Post Location",
+      "assignedCamp": "Location SMS Sent",
       "status": "Completed",
-      "timestamp": "02:55 PM"
-    },
-    {
-      "callId": "IVR-7703",
-      "callerType": "Dindi Representative",
-      "language": "Marathi",
-      "optionSelected": "Press 4 - Drinking Water Point Info",
-      "assignedCamp": "Water Tanker Station 5",
-      "status": "Completed",
-      "timestamp": "02:30 PM"
+      "timestamp": "01:50 PM"
     }
   ]
 }

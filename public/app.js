@@ -64,7 +64,7 @@ async function loadAlerts() {
       const priorityClass = alert.priority === 'CRITICAL' ? 'badge-critical' : alert.priority === 'HIGH' ? 'badge-high' : 'badge-moderate';
       
       tr.innerHTML = `
-        <td><strong>${alert.id}</strong><br><small class="text-muted">${alert.bandId}</small></td>
+        <td><strong>${alert.id}</strong><br><small style="color: #64748b;">${alert.bandId}</small></td>
         <td>${alert.pilgrimName} (${alert.age} yrs)</td>
         <td>${alert.location}</td>
         <td><span class="badge ${priorityClass}">${alert.priority}</span></td>
@@ -88,11 +88,11 @@ async function triggerSosAlert() {
   const issueSelect = document.getElementById('simIssueSelect').value;
 
   const payload = {
-    bandId: bandIdInput || 'BAND-ESP-777',
-    pilgrimName: pilgrimNameInput || 'Pandurang Vitthal (Demo)',
+    bandId: bandIdInput || 'BAND-501',
+    pilgrimName: pilgrimNameInput || 'Santosh Jadhav',
     issue: issueSelect,
-    priority: 'CRITICAL',
-    location: 'Saswad - Dindi Sector #12'
+    priority: 'HIGH',
+    location: 'Saswad Halt Area'
   };
 
   try {
@@ -103,7 +103,7 @@ async function triggerSosAlert() {
     });
     const result = await res.json();
     if (result.success) {
-      alert(`🚨 SOS EMERGENCY TRIGGERED!\nAlert ID: ${result.alert.id}\nLocation: ${result.alert.location}\nPriority: ${result.alert.priority}`);
+      alert(`🚨 SOS ALERT SENT!\nAlert ID: ${result.alert.id}\nLocation: ${result.alert.location}\nIssue: ${result.alert.issue}`);
       loadStats();
       loadAlerts();
     }
@@ -126,11 +126,11 @@ async function loadCamps() {
       card.className = 'tech-card';
       card.innerHTML = `
         <h4>🏥 ${camp.name}</h4>
-        <p style="font-size: 0.85rem; color: #cbd5e1;">Status: <strong style="color: #22c55e;">${camp.status}</strong></p>
+        <p style="font-size: 0.85rem; color: #64748b;">Status: <strong style="color: #16a34a;">${camp.status}</strong></p>
         <ul style="margin-top: 0.5rem;">
-          <li>Doctors on Duty: ${camp.doctorsOnDuty}</li>
+          <li>Doctors Available: ${camp.doctorsOnDuty}</li>
           <li>Beds Available: ${camp.bedsAvailable}</li>
-          <li>ORS Stock: ${camp.orsStock}</li>
+          <li>ORS Packets: ${camp.orsStock}</li>
           <li>Paracetamol Stock: ${camp.paracetamolStock}</li>
         </ul>
       `;
@@ -155,12 +155,12 @@ async function loadVolunteers() {
       li.className = 'tech-card';
       li.style.marginBottom = '0.75rem';
       li.innerHTML = `
-        <div style="display:flex; justify-between; align-items:center;">
-          <strong>🙋 ${log.volunteerName} (${log.dindiNumber})</strong>
+        <div style="display:flex; justify-content:space-between; align-items:center;">
+          <strong>👤 ${log.volunteerName} (${log.dindiNumber})</strong>
           <small style="color: #94a3b8;">${log.timestamp}</small>
         </div>
-        <p style="font-size: 0.88rem; color: #fef08a; margin-top: 0.25rem;">Logged Symptom: ${log.symptom} (${log.pilgrimsTreated} pilgrims treated)</p>
-        <p style="font-size: 0.8rem; color: #cbd5e1;">WASH Status: ${log.washIssue}</p>
+        <p style="font-size: 0.88rem; color: #d97706; margin-top: 0.25rem;">Log: ${log.symptom} (${log.pilgrimsTreated} pilgrims assisted)</p>
+        <p style="font-size: 0.8rem; color: #64748b;">Status: ${log.washIssue}</p>
       `;
       list.appendChild(li);
     });
@@ -189,8 +189,7 @@ async function submitVolunteerLog(e) {
     });
     const result = await res.json();
     if (result.success) {
-      alert('✅ Volunteer Symptom Logged & Synced Successfully!');
-      document.getElementById('volunteerForm').reset();
+      alert('✅ Log entry saved successfully!');
       loadVolunteers();
     }
   } catch (err) {
@@ -213,7 +212,7 @@ async function loadIvrLogs() {
         <td><strong>${log.callId}</strong></td>
         <td>${log.callerType}</td>
         <td>${log.language}</td>
-        <td><strong style="color: #fbbf24;">${log.optionSelected}</strong></td>
+        <td><strong style="color: #d97706;">${log.optionSelected}</strong></td>
         <td>${log.assignedCamp}</td>
         <td><small>${log.timestamp}</small></td>
       `;
@@ -227,10 +226,10 @@ async function loadIvrLogs() {
 async function pressIvrKey(key) {
   const display = document.getElementById('ivrScreenDisplay');
   const optionNames = {
-    '1': 'मराठी IVR: 🚨 वैद्यकीय मदत (Emergency Reporting)',
-    '2': 'मराठी IVR: 🧼 स्वच्छता व पाणी तक्रार (Sanitation)',
-    '3': 'मराठी IVR: 🏥 जवळचे वैद्यकीय केंद्र (Nearest Camp)',
-    '4': 'मराठी IVR: 🚰 पिण्याचे पाणी माहिती (Water Point)'
+    '1': 'मराठी IVR: 🚨 वैद्यकीय मदत (Emergency Aid)',
+    '2': 'मराठी IVR: 🧼 स्वच्छता / तक्रार (Sanitation)',
+    '3': 'मराठी IVR: 🏥 जवळचे वैद्यकीय केंद्र (Medical Post Location)',
+    '4': 'मराठी IVR: 🚰 पिण्याचे पाणी (Drinking Water Info)'
   };
   display.innerText = optionNames[key] || `Key ${key} pressed`;
 
@@ -258,7 +257,7 @@ function initMap() {
   map = L.map('wariMap').setView([18.1500, 74.5000], 8);
 
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; OpenStreetMap contributors | SAHYATRI Ecosystem'
+    attribution: '&copy; OpenStreetMap contributors | SAHYATRI'
   }).addTo(map);
 
   markersGroup = L.layerGroup().addTo(map);
@@ -276,7 +275,7 @@ function initMap() {
   const polyline = L.polyline(wariRoute, {
     color: '#d97706',
     weight: 4,
-    dashArray: '8, 8'
+    dashArray: '6, 6'
   }).addTo(map);
 
   map.fitBounds(polyline.getBounds(), { padding: [30, 30] });
@@ -290,12 +289,12 @@ function updateMapMarkers(alerts) {
     if (alert.lat && alert.lng) {
       const marker = L.marker([alert.lat, alert.lng]).addTo(markersGroup);
       marker.bindPopup(`
-        <div style="color: #0f172a;">
+        <div style="font-family: sans-serif; color: #0f172a;">
           <h4 style="color: #d97706; margin-bottom: 4px;">🚨 ${alert.id}</h4>
-          <p><strong>Pilgrim:</strong> ${alert.pilgrimName} (${alert.age} yrs)</p>
-          <p><strong>Issue:</strong> ${alert.issue}</p>
-          <p><strong>Location:</strong> ${alert.location}</p>
-          <p><strong>Band ID:</strong> ${alert.bandId}</p>
+          <p style="margin:2px 0;"><strong>Pilgrim:</strong> ${alert.pilgrimName} (${alert.age} yrs)</p>
+          <p style="margin:2px 0;"><strong>Issue:</strong> ${alert.issue}</p>
+          <p style="margin:2px 0;"><strong>Location:</strong> ${alert.location}</p>
+          <p style="margin:2px 0;"><strong>Band ID:</strong> ${alert.bandId}</p>
         </div>
       `);
     }
