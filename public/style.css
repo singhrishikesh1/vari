@@ -9,7 +9,7 @@
   --border-color: #e2e8f0;
   --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
   --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.07), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
-  --radius: 12px;
+  --radius: 10px;
 }
 
 * {
@@ -31,7 +31,7 @@ header {
   background: #ffffff;
   border-top: 4px solid var(--primary);
   border-bottom: 1px solid var(--border-color);
-  padding: 1.75rem 1.5rem;
+  padding: 1.5rem 1.5rem;
   box-shadow: var(--shadow-sm);
 }
 
@@ -46,54 +46,61 @@ header {
 }
 
 .brand-section h1 {
-  font-size: 2rem;
+  font-size: 1.85rem;
   font-weight: 800;
   color: #0f172a;
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.4rem;
 }
 
-.brand-section h1 span.highlight {
-  color: var(--primary);
+.brand-icon {
+  margin-right: 0.2rem;
+  vertical-align: middle;
+}
+
+.brand-sub {
+  font-weight: 500;
+  color: var(--text-muted);
+  font-size: 1.15rem;
 }
 
 .brand-section p {
-  font-size: 1rem;
+  font-size: 0.95rem;
   color: var(--text-muted);
   font-weight: 500;
-  margin-top: 0.2rem;
+  margin-top: 0.15rem;
 }
 
 .team-badge {
   background: var(--primary-light);
   border: 1px solid #fef3c7;
-  padding: 0.85rem 1.25rem;
+  padding: 0.75rem 1.15rem;
   border-radius: var(--radius);
   text-align: right;
 }
 
 .team-badge .team-name {
-  font-size: 1rem;
+  font-size: 0.95rem;
   font-weight: 700;
   color: #b45309;
 }
 
 .team-badge .team-id {
-  font-size: 0.85rem;
+  font-size: 0.82rem;
   color: #475569;
 }
 
 .team-badge .team-members {
-  font-size: 0.85rem;
+  font-size: 0.82rem;
   color: #64748b;
-  margin-top: 0.2rem;
+  margin-top: 0.15rem;
 }
 
 /* Container */
 .main-container {
   max-width: 1140px;
-  margin: 2rem auto;
+  margin: 1.75rem auto;
   padding: 0 1rem;
 }
 
@@ -102,13 +109,13 @@ header {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
   gap: 1.25rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1.75rem;
 }
 
 .stat-card {
   background: var(--bg-card);
   border: 1px solid var(--border-color);
-  padding: 1.25rem;
+  padding: 1.15rem;
   border-radius: var(--radius);
   display: flex;
   align-items: center;
@@ -123,20 +130,20 @@ header {
 }
 
 .stat-icon {
-  width: 48px;
-  height: 48px;
-  border-radius: 10px;
+  width: 44px;
+  height: 44px;
+  border-radius: 8px;
   background: var(--primary-light);
   color: var(--primary);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   border: 1px solid #fde68a;
 }
 
 .stat-info h4 {
-  font-size: 0.8rem;
+  font-size: 0.78rem;
   color: var(--text-muted);
   text-transform: uppercase;
   letter-spacing: 0.5px;
@@ -144,34 +151,34 @@ header {
 }
 
 .stat-info .stat-value {
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   font-weight: 700;
   color: var(--text-main);
 }
 
 /* Section Header */
 .section-header {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.25rem;
 }
 
 .section-header h2 {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   color: var(--text-main);
   font-weight: 700;
 }
 
 .section-header p {
   color: var(--text-muted);
-  font-size: 0.95rem;
+  font-size: 0.9rem;
 }
 
 /* Tab Navigation */
 .tab-navigation {
   display: flex;
-  gap: 0.5rem;
-  margin-bottom: 1.75rem;
+  gap: 0.35rem;
+  margin-bottom: 1.5rem;
   background: #ffffff;
-  padding: 0.4rem;
+  padding: 0.35rem;
   border-radius: var(--radius);
   border: 1px solid var(--border-color);
   overflow-x: auto;
@@ -182,11 +189,11 @@ header {
   background: transparent;
   border: none;
   color: var(--text-muted);
-  padding: 0.65rem 1.25rem;
-  border-radius: 8px;
+  padding: 0.6rem 1.15rem;
+  border-radius: 6px;
   cursor: pointer;
   font-weight: 600;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   transition: all 0.2s ease;
   white-space: nowrap;
 }
@@ -214,22 +221,22 @@ header {
 .card-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 1.5rem;
+  gap: 1.25rem;
 }
 
 .card {
   background: var(--bg-card);
   border: 1px solid var(--border-color);
   border-radius: var(--radius);
-  padding: 1.5rem;
+  padding: 1.35rem;
   box-shadow: var(--shadow-sm);
 }
 
 .card h3 {
   color: var(--text-main);
-  font-size: 1.15rem;
+  font-size: 1.1rem;
   font-weight: 700;
-  margin-bottom: 1rem;
+  margin-bottom: 0.85rem;
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -238,25 +245,25 @@ header {
 /* Module 1: SOS Smart Band */
 .band-preview {
   background: #fafafa;
-  border: 2px dashed #cbd5e1;
+  border: 1.5px dashed #cbd5e1;
   border-radius: var(--radius);
-  padding: 1.5rem;
+  padding: 1.25rem;
   text-align: center;
-  margin-bottom: 1.25rem;
+  margin-bottom: 1rem;
 }
 
 .band-illustration {
-  width: 130px;
-  height: 130px;
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
   background: linear-gradient(135deg, #ef4444, #dc2626);
-  margin: 0 auto 0.75rem;
+  margin: 0 auto 0.65rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 4px 14px rgba(220, 38, 38, 0.3);
-  border: 4px solid #ffffff;
+  box-shadow: 0 4px 12px rgba(220, 38, 38, 0.25);
+  border: 3px solid #ffffff;
   cursor: pointer;
   transition: transform 0.15s ease;
 }
@@ -267,12 +274,12 @@ header {
 
 .band-illustration span {
   font-weight: 800;
-  font-size: 1.15rem;
+  font-size: 1.1rem;
   color: #ffffff;
 }
 
 .band-illustration small {
-  font-size: 0.7rem;
+  font-size: 0.65rem;
   color: #fef08a;
 }
 
@@ -280,10 +287,10 @@ header {
   background: #dc2626;
   color: #ffffff;
   border: none;
-  padding: 0.8rem 1.5rem;
-  border-radius: 8px;
+  padding: 0.75rem 1.35rem;
+  border-radius: 6px;
   font-weight: 700;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   cursor: pointer;
   width: 100%;
   transition: background 0.2s ease;
@@ -295,25 +302,25 @@ header {
 
 /* Form controls */
 .form-group {
-  margin-bottom: 1rem;
+  margin-bottom: 0.85rem;
 }
 
 .form-group label {
   display: block;
-  font-size: 0.85rem;
+  font-size: 0.82rem;
   color: var(--text-muted);
-  margin-bottom: 0.35rem;
+  margin-bottom: 0.3rem;
   font-weight: 600;
 }
 
 .form-control {
   width: 100%;
-  padding: 0.65rem 0.85rem;
+  padding: 0.6rem 0.8rem;
   background: #ffffff;
   border: 1px solid var(--border-color);
-  border-radius: 8px;
+  border-radius: 6px;
   color: var(--text-main);
-  font-size: 0.95rem;
+  font-size: 0.9rem;
 }
 
 .form-control:focus {
@@ -326,8 +333,8 @@ header {
   background: var(--primary);
   color: #ffffff;
   border: none;
-  padding: 0.75rem 1.5rem;
-  border-radius: 8px;
+  padding: 0.7rem 1.35rem;
+  border-radius: 6px;
   font-weight: 600;
   cursor: pointer;
   width: 100%;
@@ -346,14 +353,14 @@ header {
 table {
   width: 100%;
   border-collapse: collapse;
-  margin-top: 0.5rem;
+  margin-top: 0.35rem;
 }
 
 th, td {
-  padding: 0.75rem 1rem;
+  padding: 0.65rem 0.85rem;
   text-align: left;
   border-bottom: 1px solid var(--border-color);
-  font-size: 0.9rem;
+  font-size: 0.88rem;
 }
 
 th {
@@ -363,9 +370,9 @@ th {
 }
 
 .badge {
-  padding: 0.2rem 0.55rem;
-  border-radius: 6px;
-  font-size: 0.75rem;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.72rem;
   font-weight: 700;
 }
 
@@ -402,19 +409,19 @@ th {
 .dialpad {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 0.75rem;
-  max-width: 260px;
-  margin: 1rem auto;
+  gap: 0.65rem;
+  max-width: 250px;
+  margin: 0.85rem auto;
 }
 
 .dialpad-btn {
   background: #f8fafc;
   border: 1px solid var(--border-color);
   color: var(--text-main);
-  padding: 0.85rem;
-  font-size: 1.15rem;
+  padding: 0.75rem;
+  font-size: 1.1rem;
   font-weight: 700;
-  border-radius: 10px;
+  border-radius: 8px;
   cursor: pointer;
   transition: all 0.15s ease;
 }
@@ -429,60 +436,60 @@ th {
   background: #f8fafc;
   border: 1px solid #cbd5e1;
   border-radius: 8px;
-  padding: 0.85rem;
-  margin-top: 0.75rem;
+  padding: 0.75rem;
+  margin-top: 0.65rem;
   text-align: center;
 }
 
 .ivr-status-screen h4 {
   color: #475569;
-  font-size: 0.85rem;
+  font-size: 0.8rem;
 }
 
 .ivr-status-screen p {
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   font-weight: 600;
   color: #b45309;
-  margin-top: 0.25rem;
+  margin-top: 0.2rem;
 }
 
 /* Technical Cards */
 .tech-spec-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 1.25rem;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 1.15rem;
 }
 
 .tech-card {
   background: #ffffff;
   border: 1px solid var(--border-color);
-  padding: 1.25rem;
+  padding: 1.15rem;
   border-radius: var(--radius);
   box-shadow: var(--shadow-sm);
 }
 
 .tech-card h4 {
   color: var(--text-main);
-  margin-bottom: 0.5rem;
-  font-size: 0.95rem;
+  margin-bottom: 0.4rem;
+  font-size: 0.92rem;
   font-weight: 700;
 }
 
 .tech-card ul {
   list-style-type: disc;
-  padding-left: 1.25rem;
-  font-size: 0.88rem;
+  padding-left: 1.15rem;
+  font-size: 0.85rem;
   color: var(--text-muted);
 }
 
 /* Footer */
 footer {
   text-align: center;
-  padding: 2rem 1rem;
+  padding: 1.75rem 1rem;
   color: var(--text-muted);
-  font-size: 0.88rem;
+  font-size: 0.85rem;
   border-top: 1px solid var(--border-color);
-  margin-top: 3.5rem;
+  margin-top: 3rem;
   background: #ffffff;
 }
 

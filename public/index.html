@@ -14,11 +14,16 @@
 </head>
 <body>
 
-  <!-- Header Banner -->
+  <!-- Clean Header Banner -->
   <header>
     <div class="header-container">
       <div class="brand-section">
-        <h1>🚩 SAHYATRI <span class="highlight">Healthcare</span></h1>
+        <h1>
+          <svg class="brand-icon" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#d97706" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 5v14M5 12h14"/>
+          </svg>
+          SAHYATRI <span class="brand-sub">Healthcare</span>
+        </h1>
         <p>Healthcare & Emergency Assistance System for Pandharpur Wari</p>
       </div>
       <div class="team-badge">
@@ -55,7 +60,7 @@
         </div>
       </div>
       <div class="stat-card">
-        <div class="stat-icon">🚨</div>
+        <div class="stat-icon">🔔</div>
         <div class="stat-info">
           <h4>Today's SOS Alerts</h4>
           <div class="stat-value" id="statSosAlerts">8</div>
@@ -65,11 +70,11 @@
 
     <!-- Tab Navigation Bar -->
     <div class="tab-navigation">
-      <button class="tab-btn active" data-tab="tab-overview">📄 Project Overview</button>
-      <button class="tab-btn" data-tab="tab-smartband">⌚ SOS Smart Band</button>
-      <button class="tab-btn" data-tab="tab-volunteer">📱 Volunteer App</button>
-      <button class="tab-btn" data-tab="tab-dashboard">📊 Health Dashboard & Map</button>
-      <button class="tab-btn" data-tab="tab-ivr">📞 Marathi IVR Helpline</button>
+      <button class="tab-btn active" data-tab="tab-overview">Project Overview</button>
+      <button class="tab-btn" data-tab="tab-smartband">SOS Smart Band</button>
+      <button class="tab-btn" data-tab="tab-volunteer">Volunteer App</button>
+      <button class="tab-btn" data-tab="tab-dashboard">Central Dashboard & Map</button>
+      <button class="tab-btn" data-tab="tab-ivr">Marathi IVR Helpline</button>
     </div>
 
     <!-- TAB 1: PROJECT OVERVIEW -->
@@ -81,7 +86,7 @@
 
       <div class="card-grid" style="margin-bottom: 2rem;">
         <div class="card">
-          <h3>⚠️ Key Challenges in Wari</h3>
+          <h3>Key Challenges in Wari</h3>
           <p style="font-size: 0.95rem; color: #475569; margin-bottom: 1rem;">
             Lakhs of pilgrims travel on foot during the annual Pandharpur Wari. Healthcare management faces major challenges:
           </p>
@@ -94,7 +99,7 @@
         </div>
 
         <div class="card">
-          <h3>💡 The SAHYATRI Solution</h3>
+          <h3>The SAHYATRI Solution</h3>
           <p style="font-size: 0.95rem; color: #475569; margin-bottom: 1rem;">
             SAHYATRI connects pilgrims, field volunteers, and medical posts into one reliable system:
           </p>
@@ -108,7 +113,7 @@
       </div>
 
       <div class="card">
-        <h3>🛠️ System Components & Estimated Cost</h3>
+        <h3>System Components & Estimated Cost</h3>
         <div class="tech-spec-grid" style="margin-top: 1rem;">
           <div class="tech-card">
             <h4>Hardware Band</h4>
@@ -157,7 +162,7 @@
 
       <div class="card-grid">
         <div class="card">
-          <h3>⌚ Test Emergency Button</h3>
+          <h3>Test Emergency Button</h3>
           <div class="band-preview">
             <div class="band-illustration" onclick="triggerSosAlert()" title="Click to test SOS button">
               <span>SOS</span>
@@ -186,14 +191,14 @@
                 <option value="Chest Pain / Difficulty Breathing">Chest Pain / Difficulty Breathing</option>
               </select>
             </div>
-            <button type="submit" class="btn-sos">🚨 Send SOS Emergency Alert</button>
+            <button type="submit" class="btn-sos">Send SOS Emergency Alert</button>
           </form>
         </div>
 
         <div class="card">
-          <h3>📋 Band Design Details</h3>
+          <h3>Band Design Details</h3>
           <div style="background: #f8fafc; padding: 1.25rem; border-radius: 10px; border: 1px solid var(--border-color); text-align: center; margin-bottom: 1rem;">
-            <div style="font-size: 3.5rem; line-height: 1;">🏷️</div>
+            <div style="font-size: 3rem; line-height: 1; color: var(--primary);">🏷️</div>
             <h4 style="color: var(--primary); margin-top: 0.5rem;">Printed QR Medical ID</h4>
             <p style="font-size: 0.85rem; color: #64748b; margin-top: 0.25rem;">
               Volunteers can scan the band's printed QR code to immediately view the pilgrim's name, emergency contact, and basic medical details.
@@ -217,7 +222,7 @@
 
       <div class="card-grid">
         <div class="card">
-          <h3>📝 Log Medical Assistance</h3>
+          <h3>Log Medical Assistance</h3>
           <form id="volunteerForm" onsubmit="submitVolunteerLog(event)">
             <div class="form-group">
               <label>Volunteer Name</label>
@@ -244,7 +249,7 @@
         </div>
 
         <div class="card">
-          <h3>📋 Recent Volunteer Activity</h3>
+          <h3>Recent Volunteer Activity</h3>
           <div id="volunteerLogsList" style="max-height: 400px; overflow-y: auto;">
             <!-- Dynamic entries -->
           </div>
@@ -260,12 +265,12 @@
       </div>
 
       <div class="card" style="margin-bottom: 1.5rem;">
-        <h3>🗺️ Live Google Map – Pandharpur Wari Route</h3>
+        <h3>Live Route Map – Pandharpur Wari</h3>
         <div id="wariMap"></div>
       </div>
 
       <div class="card" style="margin-bottom: 1.5rem;">
-        <h3>🚨 Active Emergency Alerts</h3>
+        <h3>Active Emergency Alerts</h3>
         <div class="table-container">
           <table>
             <thead>
@@ -287,7 +292,7 @@
       </div>
 
       <div class="card">
-        <h3>🏥 Medical Post Status</h3>
+        <h3>Medical Post Status</h3>
         <div class="tech-spec-grid" id="campsListContainer" style="margin-top: 1rem;">
           <!-- Dynamic entries -->
         </div>
@@ -303,7 +308,7 @@
 
       <div class="card-grid">
         <div class="card">
-          <h3>📞 Test Keypad Options</h3>
+          <h3>Test Keypad Options</h3>
           <p style="font-size: 0.85rem; color: #64748b; text-align: center;">
             Toll-Free Number: <strong>1800-SAHYATRI</strong>
           </p>
@@ -327,7 +332,7 @@
         </div>
 
         <div class="card">
-          <h3>📋 Recent Helpline Calls</h3>
+          <h3>Recent Helpline Calls</h3>
           <div class="table-container">
             <table>
               <thead>
