@@ -23,44 +23,58 @@
     {
       "id": "SOS-104",
       "bandId": "BAND-882",
-      "pilgrimName": "Nivrutti Patil",
-      "age": 64,
+      "pilgrimName": "Arya mishra",
+      "age": 62,
       "location": "Saswad Camp 2",
       "lat": 18.3438,
       "lng": 74.0305,
       "issue": "Dehydration & Low Blood Pressure",
       "priority": "HIGH",
       "status": "Doctor Attending",
-      "assignedVolunteer": "Suresh J.",
+      "assignedVolunteer": "Vaibhav Tiwari",
       "timestamp": "02:15 PM"
     },
     {
       "id": "SOS-103",
       "bandId": "BAND-419",
-      "pilgrimName": "Kamalbai More",
-      "age": 58,
+      "pilgrimName": "Gopal parik",
+      "age": 57,
       "location": "Jejuri Stop",
       "lat": 18.2778,
       "lng": 74.1593,
       "issue": "Foot Blister & Joint Pain",
       "priority": "MODERATE",
       "status": "First Aid Provided",
-      "assignedVolunteer": "Pooja M.",
+      "assignedVolunteer": "Siddharth Bhatkar",
       "timestamp": "01:40 PM"
     },
     {
       "id": "SOS-102",
       "bandId": "BAND-105",
-      "pilgrimName": "Raghunath Joshi",
-      "age": 71,
+      "pilgrimName": "Khushi yadav",
+      "age": 63,
       "location": "Alandi Sector",
       "lat": 18.6771,
       "lng": 73.8967,
       "issue": "Dizziness from Heat",
       "priority": "HIGH",
       "status": "Resolved",
-      "assignedVolunteer": "Amit K.",
+      "assignedVolunteer": "Vaibhav Tiwari",
       "timestamp": "11:20 AM"
+    },
+    {
+      "id": "SOS-101",
+      "bandId": "BAND-302",
+      "pilgrimName": "Yash jha",
+      "age": 52,
+      "location": "Phaltan Medical Post",
+      "lat": 17.9886,
+      "lng": 74.4328,
+      "issue": "Mild Asthma / Exhaustion",
+      "priority": "MODERATE",
+      "status": "Resolved",
+      "assignedVolunteer": "Siddharth Bhatkar",
+      "timestamp": "09:45 AM"
     }
   ],
   "medicalCamps": [
@@ -110,6 +124,17 @@
     },
     {
       "id": "CAMP-5",
+      "name": "Phaltan Medical Post",
+      "lat": 17.9886,
+      "lng": 74.4328,
+      "doctorsOnDuty": 4,
+      "bedsAvailable": 12,
+      "orsStock": "High",
+      "paracetamolStock": "Adequate",
+      "status": "Open"
+    },
+    {
+      "id": "CAMP-6",
       "name": "Pandharpur Main Hospital Base",
       "lat": 17.6775,
       "lng": 75.3283,
@@ -123,18 +148,18 @@
   "volunteerLogs": [
     {
       "id": "LOG-301",
-      "volunteerName": "Suresh Deshmukh",
+      "volunteerName": "Vaibhav Tiwari",
       "dindiNumber": "Dindi 12",
-      "symptom": "Dehydration / Exhaustion",
+      "symptom": "ORS solution & basic medical aid provided",
       "pilgrimsTreated": 8,
-      "washIssue": "Water supply refill done at halt",
+      "washIssue": "Water tanker refilled at Saswad halt",
       "timestamp": "15 mins ago"
     },
     {
       "id": "LOG-302",
-      "volunteerName": "Pooja More",
+      "volunteerName": "Siddharth Bhatkar",
       "dindiNumber": "Dindi 24",
-      "symptom": "Foot Blisters",
+      "symptom": "Foot blister care & pain relief gel",
       "pilgrimsTreated": 12,
       "washIssue": "Sanitation area cleaned by local team",
       "timestamp": "40 mins ago"
@@ -143,7 +168,7 @@
   "ivrLogs": [
     {
       "callId": "CALL-501",
-      "callerType": "Devotee (Keypad Phone)",
+      "callerType": "Arya mishra (Feature Phone)",
       "language": "Marathi",
       "optionSelected": "Key 1 - Emergency Medical Aid",
       "assignedCamp": "Nearest Camp (Saswad)",
@@ -152,7 +177,7 @@
     },
     {
       "callId": "CALL-502",
-      "callerType": "Elderly Pilgrim",
+      "callerType": "Gopal parik (Elderly Pilgrim)",
       "language": "Marathi",
       "optionSelected": "Key 3 - Find Medical Post Location",
       "assignedCamp": "Location SMS Sent",

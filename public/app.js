@@ -88,11 +88,12 @@ async function triggerSosAlert() {
   const issueSelect = document.getElementById('simIssueSelect').value;
 
   const payload = {
-    bandId: bandIdInput || 'BAND-501',
-    pilgrimName: pilgrimNameInput || 'Santosh Jadhav',
+    bandId: bandIdInput || 'BAND-882',
+    pilgrimName: pilgrimNameInput || 'Arya mishra',
+    age: 62,
     issue: issueSelect,
     priority: 'HIGH',
-    location: 'Saswad Halt Area'
+    location: 'Saswad Camp 2'
   };
 
   try {
@@ -103,7 +104,7 @@ async function triggerSosAlert() {
     });
     const result = await res.json();
     if (result.success) {
-      alert(`🚨 SOS ALERT SENT!\nAlert ID: ${result.alert.id}\nLocation: ${result.alert.location}\nIssue: ${result.alert.issue}`);
+      alert(`🚨 SOS ALERT SENT!\nAlert ID: ${result.alert.id}\nPilgrim: ${result.alert.pilgrimName}\nLocation: ${result.alert.location}\nIssue: ${result.alert.issue}`);
       loadStats();
       loadAlerts();
     }
@@ -189,7 +190,7 @@ async function submitVolunteerLog(e) {
     });
     const result = await res.json();
     if (result.success) {
-      alert('✅ Log entry saved successfully!');
+      alert('✅ Volunteer Log entry saved successfully!');
       loadVolunteers();
     }
   } catch (err) {
@@ -248,34 +249,43 @@ async function pressIvrKey(key) {
   }
 }
 
-// Initialize Leaflet Map for Wari Route
+// Initialize Leaflet Map for Wari Route using Google Maps Tiles
 function initMap() {
   const mapElement = document.getElementById('wariMap');
   if (!mapElement || typeof L === 'undefined') return;
 
   // Center around Pune - Saswad - Pandharpur Wari Route
-  map = L.map('wariMap').setView([18.1500, 74.5000], 8);
+  map = L.map('wariMap').setView([18.1500, 74.5000], 9);
 
-  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; OpenStreetMap contributors | SAHYATRI'
+  // Use Google Maps Tile Layer
+  L.tileLayer('https://mt1.google.com/vt/lyrs=m&x={x}&y={y}&z={z}', {
+    maxZoom: 20,
+    attribution: '&copy; Google Maps | Pandharpur Wari Palkhi Route'
   }).addTo(map);
 
   markersGroup = L.layerGroup().addTo(map);
 
-  // Draw Pandharpur Wari Route Polyline
-  const wariRoute = [
+  // Actual Wari Route Points following actual highways (MH SH 114 / NH 965 Palkhi Marg)
+  const wariRouteCoordinates = [
     [18.6771, 73.8967], // Alandi
-    [18.5204, 73.8567], // Pune
+    [18.5204, 73.8567], // Pune City (Sangamwadi)
+    [18.4500, 73.9300], // Hadapsar
+    [18.3986, 73.9975], // Dive Ghat (Famous Scenic Wari Pass)
     [18.3438, 74.0305], // Saswad
-    [18.2778, 74.1593], // Jejuri
+    [18.2778, 74.1593], // Jejuri (Lord Khandoba Temple)
     [18.0375, 74.1842], // Lonand
-    [17.6775, 75.3283]  // Pandharpur
+    [17.9886, 74.4328], // Phaltan
+    [17.9042, 74.7208], // Natepute
+    [17.8427, 74.8872], // Malshiras
+    [17.7289, 75.2789], // Wakhari (Palkhi Meet Point)
+    [17.6775, 75.3283]  // Pandharpur Vitthal Temple
   ];
 
-  const polyline = L.polyline(wariRoute, {
+  // Draw smooth polyline for actual Wari route
+  const polyline = L.polyline(wariRouteCoordinates, {
     color: '#d97706',
-    weight: 4,
-    dashArray: '6, 6'
+    weight: 5,
+    opacity: 0.85
   }).addTo(map);
 
   map.fitBounds(polyline.getBounds(), { padding: [30, 30] });

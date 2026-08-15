@@ -171,11 +171,11 @@
           <form id="sosForm" onsubmit="event.preventDefault(); triggerSosAlert();">
             <div class="form-group">
               <label>Band ID Tag</label>
-              <input type="text" id="simBandId" class="form-control" value="BAND-882" placeholder="e.g. BAND-501">
+              <input type="text" id="simBandId" class="form-control" value="BAND-882" placeholder="e.g. BAND-882">
             </div>
             <div class="form-group">
               <label>Pilgrim Name</label>
-              <input type="text" id="simPilgrimName" class="form-control" value="Nivrutti Patil" placeholder="Pilgrim Name">
+              <input type="text" id="simPilgrimName" class="form-control" value="Arya mishra" placeholder="Pilgrim Name">
             </div>
             <div class="form-group">
               <label>Reported Problem</label>
@@ -221,23 +221,23 @@
           <form id="volunteerForm" onsubmit="submitVolunteerLog(event)">
             <div class="form-group">
               <label>Volunteer Name</label>
-              <input type="text" id="vName" class="form-control" value="Suresh Deshmukh" required>
+              <input type="text" id="vName" class="form-control" value="Vaibhav Tiwari" required>
             </div>
             <div class="form-group">
               <label>Dindi Location</label>
               <select id="dindiNum" class="form-control">
-                <option value="Dindi 12 (Saswad Stop)">Dindi 12 (Saswad Stop)</option>
-                <option value="Dindi 24 (Jejuri Road)">Dindi 24 (Jejuri Road)</option>
-                <option value="Dindi 05 (Alandi Sector)">Dindi 05 (Alandi Sector)</option>
+                <option value="Dindi 12">Dindi 12 (Saswad Stop)</option>
+                <option value="Dindi 24">Dindi 24 (Jejuri Road)</option>
+                <option value="Dindi 05">Dindi 05 (Alandi Sector)</option>
               </select>
             </div>
             <div class="form-group">
               <label>Medical Assistance Provided</label>
-              <input type="text" id="symptomText" class="form-control" value="ORS solution & Bandages" required>
+              <input type="text" id="symptomText" class="form-control" value="ORS solution & basic medical aid provided" required>
             </div>
             <div class="form-group">
               <label>Number of Devotees Assisted</label>
-              <input type="number" id="treatedCount" class="form-control" value="4" min="1" required>
+              <input type="number" id="treatedCount" class="form-control" value="8" min="1" required>
             </div>
             <button type="submit" class="btn-primary">Save Activity Log</button>
           </form>
@@ -260,7 +260,7 @@
       </div>
 
       <div class="card" style="margin-bottom: 1.5rem;">
-        <h3>🗺️ Wari Route Map</h3>
+        <h3>🗺️ Live Google Map – Pandharpur Wari Route</h3>
         <div id="wariMap"></div>
       </div>
 
