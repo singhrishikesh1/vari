@@ -29,4 +29,4 @@ Every year, lakhs of devotees participate in the Pandharpur Wari pilgrimage. Med
 
 This project is created for **Varithon 2026** by Team Checkmate (U689ELV5).
 
-Variathon is an innovative hackathon-focused platform designed to bring together developers, designers, innovators, and problem-solvers to build impactful solutions for real-world challenges. The platform encourages collaboration, creativity, and rapid experimentation by providing participants with the opportunity to transform ideas into working prototypes. With a focus on technology, innovation, and teamwork, Variathon aims to create an environment where participants can learn new skills, explore emerging 
+Variathon is an innovative hackathon-focused platform designed to bring together developers, designers, innovators, and problem-solvers to build impactful solutions for real-world challenges. The platform encourages collaboration, creativity, and rapid experimentation by providing participants with the opportunity to transform ideas into working prototypes. With a focus on technology, innovation, and teamwork, Variathon aims to create an environment where participants can learn new skills, explore 
