@@ -28,3 +28,4 @@ Every year, lakhs of devotees participate in the Pandharpur Wari pilgrimage. Med
 ---
 
 This project is created for **Varithon 2026** by Team Checkmate (U689ELV5).
+
