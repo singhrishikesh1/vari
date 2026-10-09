@@ -18,6 +18,7 @@ Every year, lakhs of devotees participate in the Pandharpur Wari pilgrimage. Med
 
 ---
 
+
 ## Key Solution Pillars
 
 1. **SOS Smart Band (₹100–120/band):** Wearable BLE panic button, QR Medical ID, offline identification, and battery-operated design using ESP32 / Nordic nRF52832.
